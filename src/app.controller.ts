@@ -53,6 +53,7 @@ export class AppController {
       this.httpService.post(
         `http://host.docker.internal:8000/api/models/${modelId}/predict/`,
         inputs,
+        { headers: { Authorization: `Api-Key ${apiKey}` } },
       ),
     );
     return data;
