@@ -1,0 +1,13 @@
+version: "3.4"
+
+services:
+  app:
+    image: unirflix-api
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: ["yarn", "start:prod"]
+    ports:
+      - 3010:3010
+    volumes:
+      - ./:/app

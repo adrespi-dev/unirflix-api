@@ -56,6 +56,6 @@ export class AppController {
         { headers: { Authorization: `Api-Key ${apiKey}` } },
       ),
     );
-    return data;
+    return data.predictions;
   }
 }

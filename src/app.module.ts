@@ -8,8 +8,8 @@ import { HttpModule } from '@nestjs/axios';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb://root:root@localhost:27018/?authMechanism=DEFAULT',
-      { dbName: 'tfm' },
+      'mongodb://root:root@host.docker.internal:27018/?authMechanism=DEFAULT',
+      { dbName: 'tfm_massive' },
     ),
     MongooseModule.forFeature([
       { name: Rating.name, schema: RatingSchema },
